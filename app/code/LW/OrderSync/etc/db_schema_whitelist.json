@@ -1,0 +1,13 @@
+{
+    "erp_api_order_log": {
+        "column": {
+            "log_id": true,
+            "order_id": true,
+            "created_at": true,
+            "return_code": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}
