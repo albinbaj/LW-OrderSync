@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <meta name="robots" content="NOINDEX,NOFOLLOW" />
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <referenceBlock name="page.main.title">
+                <action method="setPageTitle">
+                    <argument translate="true" name="title" xsi:type="string">ERP Order Sync History</argument>
+                </action>
+            </referenceBlock>
+
+            <block name="erp.log.list" template="LW_OrderSync::items.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">LW\OrderSync\ViewModel\LogData</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
