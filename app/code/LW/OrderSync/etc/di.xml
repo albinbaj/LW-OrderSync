@@ -4,6 +4,14 @@
     <preference for="LW\OrderSync\Api\Data\LogInterface" type="LW\OrderSync\Model\Log"/>
     <preference for="LW\OrderSync\Api\Data\LogSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
 
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="listErpSyncHistory" xsi:type="object">LW\OrderSync\Console\Command\ListErpSyncHistory</item>
+            </argument>
+        </arguments>
+    </type>
+
     <type name="Magento\Sales\Api\OrderManagementInterface">
         <plugin name="do_after_place_order" type="LW\OrderSync\Plugin\AddOrderDataToMQ" />
     </type>
