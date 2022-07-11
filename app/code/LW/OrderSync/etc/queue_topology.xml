@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/topology.xsd">
+    <exchange name="lw.order" type="topic" connection="amqp">
+        <binding id="lw.order.sync" topic="lw.order.sync" destinationType="queue" destination="lw_order_sync"/>
+    </exchange>
+</config>
